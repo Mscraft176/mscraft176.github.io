@@ -54,7 +54,7 @@
     document.querySelectorAll("[data-i18n]").forEach(element => { element.textContent = t[element.dataset.i18n]; });
     const name = local(profile.name) || "Your Name";
     byId("site-name").textContent = local(profile.shortName) || name;
-    byId("hero-name").innerHTML = `${escape(name)}<span class="name-period">.</span>`;
+    byId("hero-name").textContent = name;
     byId("footer-name").textContent = name;
     byId("hero-tagline").textContent = local(profile.tagline);
     byId("hero-affiliation").textContent = local(profile.affiliation);
@@ -78,6 +78,12 @@
       .filter(key => local(profile[key])).map(key => `<div><dt>${t[key]}</dt><dd>${text(profile[key])}</dd></div>`).join("");
     byId("research-list").innerHTML = items(content.research).map((item, index) => `<article class="research-item"><span class="item-number">${String(index + 1).padStart(2, "0")}</span><h3>${text(item.title)}</h3><p>${text(item.description)}</p>${items(item.tags).length ? `<div class="tag-list">${items(item.tags).map(tag => `<span class="tag">${text(tag)}</span>`).join("")}</div>` : ""}${item.url ? `<div class="item-link">${anchor(t.more, item.url)}</div>` : ""}</article>`).join("");
     if (!items(content.research).length) byId("research-list").innerHTML = `<p class="contact-empty">${t.comingSoon}</p>`;
+    const hasPublications = items(content.publications).length > 0;
+    byId("publications").hidden = !hasPublications;
+    byId("navigation").querySelector('a[href="#publications"]').hidden = !hasPublications;
+    document.querySelectorAll("main .section:not([hidden])").forEach((section, index) => {
+      section.querySelector(".section-index").textContent = `${String(index + 1).padStart(2, "0")} /`;
+    });
     byId("publication-list").innerHTML = items(content.publications).length
       ? items(content.publications).map(paper => `<article class="publication"><div class="publication-year">${text(paper.year)}</div><div><h3>${text(paper.title)}</h3>${paper.authors ? `<p>${text(paper.authors)}</p>` : ""}${paper.venue || paper.status ? `<p>${text(paper.venue)}${paper.status ? `<span class="status">${text(paper.status)}</span>` : ""}</p>` : ""}<div class="publication-links">${items(paper.links).map(link => anchor(link.label, link.url)).join("")}</div></div></article>`).join("")
       : `<div class="empty-publications"><span class="empty-symbol" aria-hidden="true">≡</span><div><h3>${t.papersEmpty}</h3><p>${t.papersHint}</p></div></div>`;
