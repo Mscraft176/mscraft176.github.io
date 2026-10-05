@@ -3,74 +3,72 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A personal homepage for research, writing, and ideas.">
+  <meta name="description" content="Panhuan Shi, senior undergraduate at Nanjing University.">
   <meta name="theme-color" content="#f7f6f2">
-  <title>Your Name — Personal Homepage</title>
+  <title>Panhuan Shi</title>
   <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
   <link rel="stylesheet" href="./assets/styles.css">
   <script defer src="./content.js"></script>
   <script defer src="./assets/site.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="wordmark" href="#home" aria-label="Home"><span class="mark" aria-hidden="true">∗</span><span id="site-name">Your Name</span></a>
+      <a class="wordmark" href="#home" aria-label="Home"><span id="site-name">Panhuan Shi</span></a>
       <div class="header-controls">
         <nav class="navigation" id="navigation" aria-label="Main navigation">
-          <a href="#about" data-i18n="about">About</a>
-          <a href="#research" data-i18n="research">Research</a>
-          <a href="#publications" data-i18n="publications" hidden>Publications</a>
-          <a href="#notes" data-i18n="notes">Notes</a>
-          <a href="#contact" data-i18n="contact">Contact</a>
+          <a href="#about">About</a>
+          <a href="#research" hidden>Research</a>
+          <a href="#publications" hidden>Publications</a>
+          <a href="#notes" hidden>Notes</a>
+          <a href="#contact">Contact</a>
         </nav>
         <button class="menu-button" id="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Open menu"><span></span><span></span></button>
       </div>
     </div>
   </header>
   <main id="main">
-    <section class="hero page-width" id="home" aria-labelledby="hero-name">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="small-dot" aria-hidden="true"></span><span data-i18n="homepage">Personal homepage</span></p>
-        <h1 id="hero-name">Your Name</h1>
-        <p class="hero-tagline" id="hero-tagline">Research, ideas,<br>and a little curiosity.</p>
-        <p class="hero-affiliation" id="hero-affiliation">Affiliation to be added</p>
-        <div class="hero-actions"><a class="button button-dark" href="#research"><span data-i18n="explore">Explore my research</span><span aria-hidden="true">↗</span></a><a class="text-link" id="cv-link" hidden><span data-i18n="cv">Curriculum vitae</span><span aria-hidden="true">↗</span></a></div>
-      </div>
-      <div class="hero-visual">
-        <div class="visual-corner top-left" aria-hidden="true"></div><div class="visual-corner bottom-right" aria-hidden="true"></div>
-        <img class="geometry" id="hero-art" src="./assets/geometry.svg" alt="Stereographic projection of linked circles in the Hopf fibration" width="500" height="500">
-        <img class="portrait" id="portrait" alt="" hidden>
-        <div class="visual-caption" aria-hidden="true"><span>HOPF FIBRATION</span><span>S³ → S²</span></div>
-      </div>
-    </section>
-    <div class="page-width section-rule"><span data-i18n="welcome">A space for thinking & sharing.</span><a class="scroll-link" href="#about"><span data-i18n="scroll">Scroll to discover</span><span aria-hidden="true">↓</span></a></div>
-    <div class="page-width">
-      <section class="section" id="about" aria-labelledby="about-title">
-        <div class="section-heading"><p class="section-index">01 /</p><h2 id="about-title" data-i18n="about">About</h2><p class="section-aside" data-i18n="aboutAside">A brief introduction.</p></div>
-        <div class="about-layout"><div class="about-copy" id="about-content"></div><dl class="profile-details" id="profile-details"></dl></div>
-        <div id="education-block" hidden><h3 class="subheading" data-i18n="education">Education</h3><div id="education-list"></div></div>
-        <div id="news-block" hidden><h3 class="subheading" data-i18n="news">Recent updates</h3><div id="news-list"></div></div>
+    <div class="page-width" id="home">
+      <section class="section profile-section" id="about" aria-labelledby="about-title">
+        <div class="profile-layout">
+          <div class="profile-copy">
+            <h1 id="hero-name">Panhuan Shi</h1>
+            <div class="section-heading"><h2 id="about-title">About</h2></div>
+            <div class="about-copy" id="about-content"></div>
+            <div class="interests-block" id="interests-block">
+              <h3>Research interests</h3>
+              <ul class="interests-list" id="interests-list"></ul>
+            </div>
+            <a class="text-link cv-link" id="cv-link" hidden>Curriculum vitae<span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-visual">
+            <img class="geometry" id="hero-art" src="./assets/geometry.svg" alt="Linked fibers of the Hopf fibration, shown as three-dimensional tubes" width="500" height="500">
+            <img class="portrait" id="portrait" alt="" hidden>
+          </div>
+        </div>
+        <div id="education-block" hidden><h3 class="subheading">Education</h3><div id="education-list"></div></div>
+        <div id="news-block" hidden><h3 class="subheading">Recent updates</h3><div id="news-list"></div></div>
       </section>
-      <section class="section" id="research" aria-labelledby="research-title">
-        <div class="section-heading"><p class="section-index">02 /</p><h2 id="research-title" data-i18n="research">Research</h2><p class="section-aside" data-i18n="researchAside">Questions I keep returning to.</p></div>
+      <section class="section" id="research" aria-labelledby="research-title" hidden>
+        <div class="section-heading"><h2 id="research-title">Research</h2></div>
         <div class="research-grid" id="research-list"></div>
       </section>
       <section class="section" id="publications" aria-labelledby="publications-title" hidden>
-        <div class="section-heading"><p class="section-index">03 /</p><h2 id="publications-title" data-i18n="publications">Publications</h2><p class="section-aside" data-i18n="publicationsAside">Papers & preprints.</p></div>
+        <div class="section-heading"><h2 id="publications-title">Publications</h2></div>
         <div id="publication-list"></div>
       </section>
-      <section class="section" id="notes" aria-labelledby="notes-title">
-        <div class="section-heading"><p class="section-index">03 /</p><h2 id="notes-title" data-i18n="notes">Notes</h2><p class="section-aside" data-i18n="notesAside">Ideas, one page at a time.</p></div>
+      <section class="section" id="notes" aria-labelledby="notes-title" hidden>
+        <div class="section-heading"><h2 id="notes-title">Notes</h2></div>
         <div class="notes-grid" id="notes-list"></div>
       </section>
       <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-        <div class="section-heading"><p class="section-index">04 /</p><h2 id="contact-title" data-i18n="contact">Contact</h2></div>
-        <div class="contact-layout"><p class="contact-message" id="contact-message"></p><div class="contact-links" id="contact-links"></div></div>
+        <div class="section-heading"><h2 id="contact-title">Contact</h2></div>
+        <div class="contact-links" id="contact-links"></div>
       </section>
     </div>
   </main>
-  <footer class="site-footer page-width"><p>© <span id="current-year"></span> <span id="footer-name">Your Name</span></p><p class="last-updated" id="last-updated" hidden></p><a href="#home"><span data-i18n="backToTop">Back to top</span><span aria-hidden="true">↑</span></a></footer>
+  <footer class="site-footer page-width"><p>© <span id="current-year"></span> <span id="footer-name">Panhuan Shi</span></p><p class="last-updated" id="last-updated" hidden></p><a href="#home">Back to top<span aria-hidden="true">↑</span></a></footer>
   <noscript><div class="noscript-note">Please enable JavaScript to view this homepage.</div></noscript>
 </body>
 </html>
