@@ -21,8 +21,18 @@ window.SITE_CONTENT = {
     "Convergence of Riemannian manifolds"
   ],
   // Research 留给具体研究项目；没有内容时隐藏。
-  // { title: "Project title", description: "Project summary.", tags: [], url: "" }
-  research: [],
+  // { title: "Project title", description: "Project summary.",
+  //   links: [{ label: "PDF", url: "./files/project.pdf" }] }
+  research: [
+    {
+      title: "Closed Manifolds with Positive Isotropic Curvature in Dimensions 5, 6, and 7",
+      description: "Independent research. The main results are also covered by Brendle and Tsiamis’s paper linked below, so I chose not to post this manuscript on arXiv.",
+      links: [
+        { label: "PDF", url: "./files/positive-isotropic-curvature-5-6-7.pdf" },
+        { label: "Brendle–Tsiamis (arXiv:2610.02325)", url: "https://arxiv.org/abs/2610.02325" }
+      ]
+    }
+  ],
   // { title: "Paper title", authors: "Author A, Author B",
   //   venue: "Journal / preprint", year: "2026", status: "",
   //   links: [{ label: "PDF", url: "./files/paper.pdf" }] }
