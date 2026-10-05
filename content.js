@@ -30,6 +30,7 @@ window.SITE_CONTENT = {
   // { title: "Note title", type: "Expository note", date: "2026-10",
   //   description: "A short summary.", url: "./files/note.pdf" }
   notes: [
+    { title: "A Brief Note on Differentiable Sphere Theorem", url: "./files/differentiable-sphere-theorem.pdf" },
     { title: "A Brief Note on Hamilton Pinching Conjecture", url: "./files/hamilton-pinching-conjecture.pdf" },
     { title: "Lecture Notes on Regularity Theories of Elliptic PDE", url: "./files/elliptic-pde-regularity.pdf" },
     { title: "Notes on Anderson (1989): Compactness of Manifolds with Ricci Bounds", url: "./files/anderson-1989-compactness.pdf" }
