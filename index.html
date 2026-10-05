@@ -20,7 +20,7 @@
         <nav class="navigation" id="navigation" aria-label="Main navigation">
           <a href="#about" data-i18n="about">About</a>
           <a href="#research" data-i18n="research">Research</a>
-          <a href="#publications" data-i18n="publications">Publications</a>
+          <a href="#publications" data-i18n="publications" hidden>Publications</a>
           <a href="#notes" data-i18n="notes">Notes</a>
           <a href="#contact" data-i18n="contact">Contact</a>
         </nav>
@@ -32,16 +32,16 @@
     <section class="hero page-width" id="home" aria-labelledby="hero-name">
       <div class="hero-copy">
         <p class="eyebrow"><span class="small-dot" aria-hidden="true"></span><span data-i18n="homepage">Personal homepage</span></p>
-        <h1 id="hero-name">Your Name<span class="name-period">.</span></h1>
+        <h1 id="hero-name">Your Name</h1>
         <p class="hero-tagline" id="hero-tagline">Research, ideas,<br>and a little curiosity.</p>
         <p class="hero-affiliation" id="hero-affiliation">Affiliation to be added</p>
         <div class="hero-actions"><a class="button button-dark" href="#research"><span data-i18n="explore">Explore my research</span><span aria-hidden="true">↗</span></a><a class="text-link" id="cv-link" hidden><span data-i18n="cv">Curriculum vitae</span><span aria-hidden="true">↗</span></a></div>
       </div>
       <div class="hero-visual">
         <div class="visual-corner top-left" aria-hidden="true"></div><div class="visual-corner bottom-right" aria-hidden="true"></div>
-        <img class="geometry" id="hero-art" src="./assets/geometry.svg" alt="" width="500" height="500">
+        <img class="geometry" id="hero-art" src="./assets/geometry.svg" alt="Stereographic projection of linked circles in the Hopf fibration" width="500" height="500">
         <img class="portrait" id="portrait" alt="" hidden>
-        <div class="visual-caption" aria-hidden="true"><span>FORM / IDEAS</span><span>01 — ∞</span></div>
+        <div class="visual-caption" aria-hidden="true"><span>HOPF FIBRATION</span><span>S³ → S²</span></div>
       </div>
     </section>
     <div class="page-width section-rule"><span data-i18n="welcome">A space for thinking & sharing.</span><a class="scroll-link" href="#about"><span data-i18n="scroll">Scroll to discover</span><span aria-hidden="true">↓</span></a></div>
@@ -56,16 +56,16 @@
         <div class="section-heading"><p class="section-index">02 /</p><h2 id="research-title" data-i18n="research">Research</h2><p class="section-aside" data-i18n="researchAside">Questions I keep returning to.</p></div>
         <div class="research-grid" id="research-list"></div>
       </section>
-      <section class="section" id="publications" aria-labelledby="publications-title">
+      <section class="section" id="publications" aria-labelledby="publications-title" hidden>
         <div class="section-heading"><p class="section-index">03 /</p><h2 id="publications-title" data-i18n="publications">Publications</h2><p class="section-aside" data-i18n="publicationsAside">Papers & preprints.</p></div>
         <div id="publication-list"></div>
       </section>
       <section class="section" id="notes" aria-labelledby="notes-title">
-        <div class="section-heading"><p class="section-index">04 /</p><h2 id="notes-title" data-i18n="notes">Notes</h2><p class="section-aside" data-i18n="notesAside">Ideas, one page at a time.</p></div>
+        <div class="section-heading"><p class="section-index">03 /</p><h2 id="notes-title" data-i18n="notes">Notes</h2><p class="section-aside" data-i18n="notesAside">Ideas, one page at a time.</p></div>
         <div class="notes-grid" id="notes-list"></div>
       </section>
       <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-        <div class="section-heading"><p class="section-index">05 /</p><h2 id="contact-title" data-i18n="contact">Contact</h2></div>
+        <div class="section-heading"><p class="section-index">04 /</p><h2 id="contact-title" data-i18n="contact">Contact</h2></div>
         <div class="contact-layout"><p class="contact-message" id="contact-message"></p><div class="contact-links" id="contact-links"></div></div>
       </section>
     </div>
