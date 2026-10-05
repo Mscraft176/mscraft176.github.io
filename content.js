@@ -8,7 +8,7 @@ window.SITE_CONTENT = {
     shortName: "Panhuan Shi",
     email: "231501001@smail.nju.edu.cn",
     portrait: "", // 例："./assets/photo.jpg"；留空显示 Hopf fibration
-    cv: "", // 例："./files/cv.pdf"；放入文件后填写
+    cv: "./files/cv-panhuan-shi.pdf",
     description: "Panhuan Shi, senior undergraduate at Nanjing University. Research interests: Ricci flow, regularity theory of elliptic PDEs, and convergence of Riemannian manifolds."
   },
   about: [
