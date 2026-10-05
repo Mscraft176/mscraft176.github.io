@@ -1,69 +1,44 @@
 /*
  * 主页内容：通常只需要修改这个文件，网页仅显示英文。
- * 保留引号、逗号和括号。正文使用普通文本，换段落请增加数组元素。
- * 链接留空会自动隐藏，不会生成无效按钮。
+ * 正文使用普通文本；空列表会隐藏对应分区及导航。
  */
 window.SITE_CONTENT = {
   profile: {
-    name: "Your Name",
-    shortName: "Your Name",
-    tagline: "Research, ideas,\nand a little curiosity.",
-    role: "To be added",
-    affiliation: "Affiliation to be added",
-    department: "",
-    location: "",
-    email: "",
-    portrait: "", // 例："./assets/photo.jpg"；留空显示几何插图
+    name: "Panhuan Shi",
+    shortName: "Panhuan Shi",
+    email: "231501001@smail.nju.edu.cn",
+    portrait: "", // 例："./assets/photo.jpg"；留空显示 Hopf fibration
     cv: "", // 例："./files/cv.pdf"；放入文件后填写
-    description: "A personal homepage for research, writing, and ideas."
+    description: "Panhuan Shi, senior undergraduate at Nanjing University. Research interests: Ricci flow, regularity theory of elliptic PDEs, and convergence of Riemannian manifolds."
   },
   about: [
-    "A short introduction will appear here.",
-    "More about my background, current work, and interests will follow."
+    "I am a senior undergraduate at Nanjing University (2023–present)."
   ],
-  research: [
-    {
-      title: "Research direction 01",
-      description: "A brief overview of this area and the questions that interest me.",
-      tags: [],
-      url: ""
-    },
-    {
-      title: "Research direction 02",
-      description: "A place for another research interest or an ongoing project.",
-      tags: [],
-      url: ""
-    },
-    {
-      title: "Research direction 03",
-      description: "Further interests, connections, and topics to explore.",
-      tags: [],
-      url: ""
-    }
+  // 研究兴趣显示在 About 中。
+  researchInterests: [
+    "Ricci flow",
+    "Regularity theory of elliptic PDEs",
+    "Convergence of Riemannian manifolds"
   ],
-  // 论文列表为空时隐藏整个论文分区与导航；添加论文后自动显示。
-  // 复制下面对象到数组内即可添加；按你希望的顺序排列。
-  // {
-  //   title: "Paper title", authors: "Author A, Author B",
+  // Research 留给具体研究项目；没有内容时隐藏。
+  // { title: "Project title", description: "Project summary.", tags: [], url: "" }
+  research: [],
+  // { title: "Paper title", authors: "Author A, Author B",
   //   venue: "Journal / preprint", year: "2026", status: "",
-  //   links: [{ label: "PDF", url: "./files/paper.pdf" },
-  //           { label: "arXiv", url: "https://arxiv.org/abs/论文编号" }]
-  // }
+  //   links: [{ label: "PDF", url: "./files/paper.pdf" }] }
   publications: [],
   // { title: "Note title", type: "Expository note", date: "2026-10",
   //   description: "A short summary.", url: "./files/note.pdf" }
-  notes: [],
-  // 以下区块只有添加内容后才会显示。
-  // { period: "2023–2027", institution: "University name", degree: "Degree / subject" }
+  notes: [
+    { title: "A Brief Note on Hamilton Pinching Conjecture", url: "./files/hamilton-pinching-conjecture.pdf" },
+    { title: "Lecture Notes on Regularity Theories of Elliptic PDE", url: "./files/elliptic-pde-regularity.pdf" },
+    { title: "Notes on Anderson (1989): Compactness of Manifolds with Ricci Bounds", url: "./files/anderson-1989-compactness.pdf" }
+  ],
+  // { period: "2023–present", institution: "University name", degree: "Degree / subject" }
   education: [],
   // { date: "2026-10", text: "An update.", url: "" }
   news: [],
-  contactMessage: "Always happy to exchange\nideas and questions.",
-  // 填入真实链接才会显示；可以自由增加或删除。
-  links: [
-    { label: "GitHub", url: "https://github.com/Mscraft176" },
-    { label: "Google Scholar", url: "" },
-    { label: "ORCID", url: "" }
-  ],
+  // Contact 目前仅显示邮箱。添加其他链接后才会显示。
+  links: [],
   lastUpdated: "" // 例："2026-10"；留空不显示
 };
