@@ -41,7 +41,7 @@ window.SITE_CONTENT = {
       url: ""
     }
   ],
-  // 论文列表为空时显示待补充状态，不展示虚构论文。
+  // 论文列表为空时隐藏整个论文分区与导航；添加论文后自动显示。
   // 复制下面对象到数组内即可添加；按你希望的顺序排列。
   // {
   //   title: "Paper title", authors: "Author A, Author B",
