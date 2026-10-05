@@ -60,7 +60,7 @@ h3 { font-size: 16px; font-weight: 600; margin: 0 0 10px; }
 .publication { display: grid; grid-template-columns: 60px 1fr; gap: 20px; padding-block: 22px; border-top: 1px solid var(--line); }
 .publication:first-child { padding-top: 0; border-top: 0; }
 .publication-year { color: var(--muted); }
-.publication-links { display: flex; flex-wrap: wrap; gap: 17px; margin-top: 10px; }
+.research-links, .publication-links { display: flex; flex-wrap: wrap; gap: 17px; margin-top: 10px; }
 .notes-grid { display: grid; gap: 0; }
 .note { padding-block: 16px; border-top: 1px solid var(--line); }
 .note:first-child { padding-top: 0; border-top: 0; }
