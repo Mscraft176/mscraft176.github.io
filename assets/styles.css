@@ -45,7 +45,9 @@ h3 { font-size: 16px; font-weight: 600; margin: 0 0 10px; }
 .portrait { width: 82%; height: 82%; object-fit: cover; border-radius: 2px; }
 .text-link { display: inline-flex; align-items: center; gap: 13px; font-size: 14px; border-bottom: 1px solid var(--line); padding-block: 4px; }
 .text-link:hover { border-color: var(--accent); color: var(--accent); }
-.cv-link { margin-top: 22px; }
+.cv-copy { margin: 22px 0 0; }
+.cv-copy .text-link { font-size: inherit; }
+.section-intro { max-width: 760px; margin: 0 0 22px; }
 .subheading { margin: 30px 0 12px; }
 .timeline-row { display: grid; grid-template-columns: 130px 1fr; gap: 25px; padding-block: 10px; }
 .timeline-row .date, .timeline-secondary { color: var(--muted); }

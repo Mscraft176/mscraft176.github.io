@@ -31,7 +31,7 @@
     document.title = name;
     document.querySelector('meta[name="description"]').content = profile.description || name;
     const cvUrl = safeUrl(profile.cv);
-    byId("cv-link").hidden = !cvUrl;
+    byId("cv-block").hidden = !cvUrl;
     if (cvUrl) byId("cv-link").href = cvUrl;
     const portraitUrl = safeUrl(profile.portrait);
     const portrait = byId("portrait");
@@ -59,7 +59,7 @@
     byId("news-block").hidden = !items(content.news).length;
     byId("news-list").innerHTML = items(content.news).map(item => `<div class="timeline-row"><span class="date">${escape(item.date)}</span><p>${safeUrl(item.url) ? anchor(item.text, item.url) : escape(item.text)}</p></div>`).join("");
     const email = String(profile.email || "").trim();
-    const emailLink = email && /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(email) ? anchor(email, `mailto:${email}`, "contact-link") : "";
+    const emailLink = email && /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(email) ? anchor(`Email: ${email}`, `mailto:${email}`, "contact-link") : "";
     byId("contact-links").innerHTML = emailLink + items(content.links).map(link => anchor(link.label, link.url, "contact-link")).join("");
     byId("current-year").textContent = String(new Date().getFullYear());
     byId("last-updated").hidden = !content.lastUpdated;
