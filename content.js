@@ -26,7 +26,7 @@ window.SITE_CONTENT = {
   research: [
     {
       title: "Closed Manifolds with Positive Isotropic Curvature in Dimensions 5, 6, and 7",
-      description: "Independent research. The main results are also covered by Brendle and Tsiamis’s paper linked below, so I chose not to post this manuscript on arXiv.",
+      description: "Independent research. The main results coincide with corresponding results in Brendle and Tsiamis’s paper linked below, so I chose not to post this manuscript on arXiv.",
       links: [
         { label: "PDF", url: "./files/positive-isotropic-curvature-5-6-7.pdf" },
         { label: "Brendle–Tsiamis (arXiv:2610.02325)", url: "https://arxiv.org/abs/2610.02325" }
